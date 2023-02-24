@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: radial-gradient(circle, rgb(171, 188, 255) 0%, rgb(29, 7, 47) 100%);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 992px) {
+    .content {
+      flex-direction: row;
+    }
+  }
+  @media print {
+    .header__main {
+      display: none;
+    }
+  }
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.0em;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.music, .music1, .music2{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    border-radius: 8%;
+    border: 5px;
+    align-items: center;
+}
+#nome, #nome1, #nome2 {
+    text-transform: uppercase;
+    text-decoration:double;
+}
+#disco, #disco1, #disco2, #estilo, #estilo1, #estilo2, #preco, #preco1, #preco2 {
+    text-decoration: solid;
+}
+.principal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    padding-right: 12%;
+    padding-left: 13%;
+    text-align: center;
+    font-weight: bold;
+}
+h1{
+    margin-top: 15px;
+    font-family: Stencil Std, fantasy;
+    background-color: rgba(176, 127, 255, 0.63);
+    text-align: center;
+    color: rgba(36, 36, 37, 0.767);
+}
+img{
+    transition: all .5s;
+    border: 10px solid transparent;
+}
+img:hover{
+    border: 10px solid #136497;
+    border-radius: 50%;
+}

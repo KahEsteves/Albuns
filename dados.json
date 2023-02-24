@@ -1,0 +1,23 @@
+{
+    "pop": {
+    "name": "Cantora: Dua Lipa",
+    "album": "Album: Midnights",
+    "style": "Gênero: Pop",
+    "price": "Preço: R$ 50,00",
+    "image": "<img src='img/fut.jpg' width='300px'>"
+},
+    "samba": {
+    "name": "Cantor: Zeca Pagodinho",
+    "album": "Album: Deixa a vida me levar",
+    "style": "Gênero: Samba",
+    "price": "Preço: R$ 60,00",
+    "image": "<img src='img/zeca.jfif' width='300px'>"
+},
+"trap": {
+    "name": "Cantor: Filipe Ret",
+    "album": "Album: Lume",
+    "style": "Gênero: Rapper/Trapper",
+    "price": "Preço: R$ 80,00",
+    "image": "<img src='img/lume.jpg' width='300px'>"
+}
+}
